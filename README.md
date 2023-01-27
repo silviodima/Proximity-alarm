@@ -14,14 +14,14 @@ For this project, _a MQTT Broker_ (via _RabbitMQ_) is executed over the _Docker_
 
 ## Project structure
 **1. Function**:
-- :spiral_notepad: `detection_handler.js` : Nuclio function that is executed when someone is in the alarm range; 
-- :spiral_notepad: `yaml/detection_handler.yaml` : contains all the deploying informations of the function on Nuclio.
+- :spiral_notepad: `nuclio/detection_handler.js` : Nuclio function that is executed when someone is in the alarm range; 
+- :spiral_notepad: `nuclio/detection_handler.yaml` : contains all the deploying informations of the function on Nuclio.
   
 **2. Sensor**:
-- :spiral_notepad: `ultrasonic_sensor.ino` : script executed on Esp32 board, used for people detection.
+- :spiral_notepad: `ultranosic_sensor/ultrasonic_sensor.ino` : script executed on Esp32 board, used for people detection.
 
 **3. Node-RED**:
-- :spiral_notepad: `flow/proximityAlarmFlow.json`: flow used to simulate the dashboard of a home automation app.
+- :spiral_notepad: `node-RED/proximityAlarmFlow.json`: flow used to simulate the dashboard of a home automation app.
 
 ## Getting started
 ### Docker :whale2:
@@ -73,7 +73,7 @@ You have to register [here](https://ifttt.com/join).
 2. Start your _RabbitMQ_, _Nuclio_ and _Node-RED_ instances.
 3. Browse to http://localhost:8070 to access to the Nuclio dashboard.
    - Create a new project named _serverlessproj_;
-   - Click on the newly created project and then on `Import` to upload a _YAML_ file. So upload `detection_handler.yaml` from `yaml` folder;
+   - Click on the newly created project and then on `Import` to upload a _YAML_ file. So upload `detection_handler.yaml` from `nuclio` folder;
    - Click on `Create`. Go to the `Code` tab and change the _IFTTTkey_, the _url_ and the _request url_ (saved from Step1);
    - Click on `Deploy`. :pray:
 4. Browse to  http://localhost:1880 to access to the Node-RED dashboard. 
@@ -84,11 +84,11 @@ You have to register [here](https://ifttt.com/join).
    ```
    node-red-dashboard
    ```
-   - From the hamburger menu at the top right, click on `Import` and upload `proximityAlarmFlow.json` from `flow` folder;
+   - From the hamburger menu at the top right, click on `Import` and upload `proximityAlarmFlow.json` from `node-RED` folder;
    - In the newly imported flow, there are _2 MQTT nodes_: update the MQTT properties of both;
    - Click on `Deploy`.
 5. Start your `Arduino IDE` and install the ESP32 board with this [guide](https://randomnerdtutorials.com/installing-the-esp32-board-in-arduino-ide-windows-instructions/).
-   - Open `ultrasonic_sensor.ino`, so connect your ESP32 module with usb-c wire in the port. 
+   - From  `ultrasonic_sensor` folder, open `ultrasonic_sensor.ino`, so connect your ESP32 module with usb-c wire in the port. 
    - Configure `mqtt_server` and `mqtt_port` according with your MQTT Broker and set `ssid` and `password` according to your WiFi credentials;
    - Select the right board from `Tools`>`Board`>`Esp32 Arduino`>`AI-Thinker ESP32 Cam`, then select the right port;
    - You are ready to `Verify` and `Upload` the sketch.
