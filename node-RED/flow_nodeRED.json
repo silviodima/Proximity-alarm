@@ -1,0 +1,675 @@
+[
+    {
+        "id": "f6f2187d.f17ca8",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "454777f2b167e98c",
+        "type": "tab",
+        "label": "Serverless_proj",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "a4ffc3eef4bddb18",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0091ff",
+                "baseFont": "Lucida Sans Unicode,Lucida Grande,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0091ff",
+                    "edited": true
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0091ff",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#4db2ff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0091ff",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "Lucida Sans Unicode,Lucida Grande,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "19fab27d576dac32",
+        "type": "ui_group",
+        "name": "Hall/Proximity alarm",
+        "tab": "c782c2114b7a29d7",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": true,
+        "className": ""
+    },
+    {
+        "id": "c782c2114b7a29d7",
+        "type": "ui_tab",
+        "name": "My home",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "81ef405b6a6df486",
+        "type": "ui_group",
+        "name": "Dining room/Smart lock",
+        "tab": "c782c2114b7a29d7",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": true,
+        "className": ""
+    },
+    {
+        "id": "a99a4b7142e1d863",
+        "type": "ui_group",
+        "name": "Bathroom/Washing machine",
+        "tab": "c782c2114b7a29d7",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": true,
+        "className": ""
+    },
+    {
+        "id": "30bc9b565a1e9567",
+        "type": "ui_group",
+        "name": "Living room/Cameras",
+        "tab": "c782c2114b7a29d7",
+        "order": 4,
+        "disp": true,
+        "width": "6",
+        "collapse": true,
+        "className": ""
+    },
+    {
+        "id": "b8a1527cb481c3d8",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "192.168.1.6",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "1cfff109e2751fc3",
+        "type": "ui_spacer",
+        "z": "454777f2b167e98c",
+        "name": "spacer",
+        "group": "81ef405b6a6df486",
+        "order": 3,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "3cc11d24.ff01a2",
+        "type": "comment",
+        "z": "f6f2187d.f17ca8",
+        "name": "WARNING: please check you have started this container with a volume that is mounted to /data\\n otherwise any flow changes are lost when you redeploy or upgrade the container\\n (e.g. upgrade to a more recent node-red docker image).\\n  If you are using named volumes you can ignore this warning.\\n Double click or see info side panel to learn how to start Node-RED in Docker to save your work",
+        "info": "\nTo start docker with a bind mount volume (-v option), for example:\n\n```\ndocker run -it -p 1880:1880 -v /home/user/node_red_data:/data --name mynodered nodered/node-red\n```\n\nwhere `/home/user/node_red_data` is a directory on your host machine where you want to store your flows.\n\nIf you do not do this then you can experiment and redploy flows, but if you restart or upgrade the container the flows will be disconnected and lost. \n\nThey will still exist in a hidden data volume, which can be recovered using standard docker techniques, but that is much more complex than just starting with a named volume as described above.",
+        "x": 350,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "306d582f18a166ab",
+        "type": "comment",
+        "z": "454777f2b167e98c",
+        "name": "DASHBOARD",
+        "info": "",
+        "x": 250,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "041ba27c0b3ca071",
+        "type": "ui_switch",
+        "z": "454777f2b167e98c",
+        "name": "",
+        "label": "Activate",
+        "tooltip": "",
+        "group": "19fab27d576dac32",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "payload",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "On",
+        "onvalueType": "str",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "Off",
+        "offvalueType": "str",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 380,
+        "y": 520,
+        "wires": [
+            [
+                "beb4ed053cb5edf3",
+                "3cb605c05759f6ec"
+            ]
+        ]
+    },
+    {
+        "id": "beb4ed053cb5edf3",
+        "type": "ui_led",
+        "z": "454777f2b167e98c",
+        "order": 2,
+        "group": "19fab27d576dac32",
+        "width": 0,
+        "height": 0,
+        "label": "Status",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#008000",
+                "value": "On",
+                "valueType": "str"
+            },
+            {
+                "color": "#ff0000",
+                "value": "ALARM",
+                "valueType": "str"
+            },
+            {
+                "color": "#828282",
+                "value": "Off",
+                "valueType": "str"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "",
+        "x": 1390,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "638c2f00a367c938",
+        "type": "ui_switch",
+        "z": "454777f2b167e98c",
+        "name": "",
+        "label": "Activate",
+        "tooltip": "",
+        "group": "81ef405b6a6df486",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "payload",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "off",
+        "offvalueType": "str",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 380,
+        "y": 620,
+        "wires": [
+            [
+                "941f25604b12d603"
+            ]
+        ]
+    },
+    {
+        "id": "ba8e29432fbfc27f",
+        "type": "ui_switch",
+        "z": "454777f2b167e98c",
+        "name": "",
+        "label": "Activate",
+        "tooltip": "",
+        "group": "a99a4b7142e1d863",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "payload",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "off",
+        "offvalueType": "str",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 380,
+        "y": 700,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "941f25604b12d603",
+        "type": "ui_button",
+        "z": "454777f2b167e98c",
+        "name": "",
+        "group": "81ef405b6a6df486",
+        "order": 2,
+        "width": 3,
+        "height": 1,
+        "passthru": false,
+        "label": "Trigger",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 560,
+        "y": 620,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4812f7bf6ed0d2a7",
+        "type": "ui_switch",
+        "z": "454777f2b167e98c",
+        "name": "",
+        "label": "Activate",
+        "tooltip": "",
+        "group": "30bc9b565a1e9567",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "payload",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "off",
+        "offvalueType": "str",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 380,
+        "y": 780,
+        "wires": [
+            [
+                "80ad0cb07b24201b"
+            ]
+        ]
+    },
+    {
+        "id": "80ad0cb07b24201b",
+        "type": "ui_chart",
+        "z": "454777f2b167e98c",
+        "name": "",
+        "group": "30bc9b565a1e9567",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "label": "",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "1",
+        "ymax": "4",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 570,
+        "y": 780,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "fa153674c110c958",
+        "type": "ui_text",
+        "z": "454777f2b167e98c",
+        "group": "a99a4b7142e1d863",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Some data",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 590,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "bfc8cb32d868c429",
+        "type": "comment",
+        "z": "454777f2b167e98c",
+        "name": "Hall/Proximity alarm",
+        "info": "",
+        "x": 330,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "55569f58ef8264af",
+        "type": "comment",
+        "z": "454777f2b167e98c",
+        "name": "Dining room/smart lock",
+        "info": "",
+        "x": 340,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "260d99e002dd01ba",
+        "type": "comment",
+        "z": "454777f2b167e98c",
+        "name": "Bathroom/Washing Machine",
+        "info": "",
+        "x": 360,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "b16e16110f334c0a",
+        "type": "comment",
+        "z": "454777f2b167e98c",
+        "name": "Living room/cameras",
+        "info": "",
+        "x": 330,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "e80558cb9fa509a4",
+        "type": "mqtt in",
+        "z": "454777f2b167e98c",
+        "name": "detection",
+        "topic": "alarm/detection",
+        "qos": "1",
+        "datatype": "auto-detect",
+        "broker": "b8a1527cb481c3d8",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 700,
+        "y": 440,
+        "wires": [
+            [
+                "beb4ed053cb5edf3",
+                "df504c06f27b6527",
+                "d75629a5dd41d079"
+            ]
+        ]
+    },
+    {
+        "id": "3cb605c05759f6ec",
+        "type": "mqtt out",
+        "z": "454777f2b167e98c",
+        "name": "alarm/activation",
+        "topic": "alarm/activation",
+        "qos": "1",
+        "retain": "false",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "b8a1527cb481c3d8",
+        "x": 540,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "df504c06f27b6527",
+        "type": "delay",
+        "z": "454777f2b167e98c",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": true,
+        "outputs": 1,
+        "x": 860,
+        "y": 320,
+        "wires": [
+            [
+                "98957bf34ed98e02"
+            ]
+        ]
+    },
+    {
+        "id": "98957bf34ed98e02",
+        "type": "trigger",
+        "z": "454777f2b167e98c",
+        "name": "",
+        "op1": "On",
+        "op2": "On",
+        "op1type": "str",
+        "op2type": "str",
+        "duration": "250",
+        "extend": false,
+        "overrideDelay": false,
+        "units": "ms",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 1020,
+        "y": 320,
+        "wires": [
+            [
+                "beb4ed053cb5edf3"
+            ]
+        ]
+    },
+    {
+        "id": "65e1b31a5f63de53",
+        "type": "ui_audio",
+        "z": "454777f2b167e98c",
+        "name": "",
+        "group": "19fab27d576dac32",
+        "voice": "Google US English",
+        "always": "",
+        "x": 1300,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "1b8321589429c43d",
+        "type": "trigger",
+        "z": "454777f2b167e98c",
+        "name": "",
+        "op1": "This is an alarm! Check your telegram messages",
+        "op2": "please",
+        "op1type": "str",
+        "op2type": "str",
+        "duration": "250",
+        "extend": false,
+        "overrideDelay": false,
+        "units": "ms",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 1040,
+        "y": 380,
+        "wires": [
+            [
+                "65e1b31a5f63de53"
+            ]
+        ]
+    },
+    {
+        "id": "d75629a5dd41d079",
+        "type": "delay",
+        "z": "454777f2b167e98c",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "1",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": true,
+        "outputs": 1,
+        "x": 880,
+        "y": 380,
+        "wires": [
+            [
+                "1b8321589429c43d"
+            ]
+        ]
+    }
+]

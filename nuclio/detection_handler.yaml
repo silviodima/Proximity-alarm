@@ -1,0 +1,41 @@
+metadata:
+  name: detection_handler
+  labels:
+    nuclio.io/project-name: d384f2e8-5cb2-4a2a-a8e0-a7b020bb3168
+spec:
+  handler: "main:handler"
+  runtime: nodejs
+  resources:
+    requests:
+      cpu: 25m
+      memory: 1Mi
+  image: "nuclio/processor-detection_handler:latest"
+  minReplicas: 1
+  maxReplicas: 1
+  targetCPU: 75
+  triggers:
+    default-http:
+      class: ""
+      kind: http
+      maxWorkers: 1
+    detection_trigger:
+      class: ""
+      kind: mqtt
+      url: "local-ip:port"
+      username: guest
+      password: guest
+      attributes:
+        subscriptions:
+          - qos: 1
+            topic: alarm/detection
+  version: 1
+  build:
+    functionSourceCode: Y29uc3QgbXF0dCA9IHJlcXVpcmUoJ21xdHQnKQ0KY29uc3QgcmVzdCA9IHJlcXVpcmUoJ3Jlc3RsZXInKQ0KY29uc3QgaWZ0dHRfa2V5ID0gImNCUUY2Q0Q5TUdmS3kwMXpqVXVuaE1nRWl4ZVNsb1pJQ2JSNFJfQlhZNGMiDQpjb25zdCB1cmwgPSAnbXF0dDovLzE5Mi4xNjguMS42Jw0KDQpjb25zdCBvcHRpb25zID0gew0KICAgIHBvcnQ6IDE4ODMsDQogICAgaG9zdDogdXJsLA0KICAgIGNsaWVudElkOiAnZGV0ZWN0b3JfMDEnLA0KICAgIHVzZXJuYW1lOiAnZ3Vlc3QnLA0KICAgIHBhc3N3b3JkOiAnZ3Vlc3QnLA0KfTsNCg0KZnVuY3Rpb24gc2VuZEZlZWRiYWNrTXF0dChxLG1zZyl7DQogICAgY29uc3QgY2xpZW50ID0gbXF0dC5jb25uZWN0KHVybCwgb3B0aW9ucyk7DQogICAgY2xpZW50Lm9uKCdjb25uZWN0JywgZnVuY3Rpb24oKSB7DQogICAgICAgIGNsaWVudC5wdWJsaXNoKHEsIG1zZyx7cW9zOjF9LGZ1bmN0aW9uKCl7DQogICAgICAgICAgICBjbGllbnQuZW5kKCk7DQogICAgICAgIH0pOyAgICAgICAgICAgICANCiAgICB9KTsgICAgICAgIA0KfQ0KDQpmdW5jdGlvbiBzZW5kSUZUVFRtc2coKXsNCiAgICByZXN0LnBvc3QoDQogICAgImh0dHBzOi8vbWFrZXIuaWZ0dHQuY29tL3RyaWdnZXIvZGV0ZWN0aW9uX3RyaWdnZXIvanNvbi93aXRoL2tleS8iKyBpZnR0dF9rZXksIA0KICAgIHsNCiAgICAgICAgZGF0YTogew0KICAgICAgICB2YWx1ZTE6ICJBTExBUk1FIg0KICAgICAgICB9LA0KICAgIH0NCikNCi5vbigiY29tcGxldGUiLCBmdW5jdGlvbihkYXRhKSB7DQogICAgY29uc29sZS5sb2coIm1zZyBzZW50Iik7DQp9KTsNCg0KfQ0KDQpleHBvcnRzLmhhbmRsZXIgPSBmdW5jdGlvbihjb250ZXh0LCBldmVudCkgew0KDQogICAgdmFyIG1zZyA9IGV2ZW50LmJvZHkudG9TdHJpbmcoKTsNCg0KICAgIGlmKG1zZyA9PSAiQUxBUk0iKXsNCiAgICAgICAgY29uc29sZS5sb2cobXNnKTsNCiAgICAgICAgc2VuZElGVFRUbXNnKCk7DQogICAgfQ0KICAgIGNvbnRleHQuY2FsbGJhY2soIiIpOw0KfTs=
+    commands:
+      - 'npm install mqtt'
+      - 'npm install restler'
+    runtimeAttributes:
+      repositories: []
+    codeEntryType: sourceCode
+  platform: {}
+  readinessTimeoutSeconds: 60
